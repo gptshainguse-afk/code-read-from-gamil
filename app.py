@@ -125,7 +125,7 @@ def get_code():
         gmail = googleapiclient.discovery.build(API_SERVICE_NAME, API_VERSION, credentials=credentials)
         
         # --- 您可以在這裡修改查詢條件 ---
-        search_query = 'from:openai.com subject:"code" is:unread'
+        search_query = 'from:openai.com subject:"代碼"'
         # --- 修改結束 ---
 
         result = gmail.users().messages().list(userId='me', q=search_query, maxResults=1).execute()
